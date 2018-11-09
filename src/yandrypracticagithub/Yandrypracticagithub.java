@@ -20,15 +20,29 @@ public class Yandrypracticagithub {
         // TODO code application logic here
       char letra ;
       String cadena;
-      Scanner sc=new Scanner(System.in);
+      int seguir;
       
+      Scanner sc=new Scanner(System.in);
+      do{
       System.out.println("dime caracter");
       letra=sc.nextLine().charAt(0);//solo me leera un unico caracter que yo de 
       System.out.println("dime cadena ");
       cadena=sc.nextLine();
      
-      System.out.println("he contado " +contarLetras(cadena,letra)+ " con el caracter " +letra);
-   
+     System.out.println("otra cadena s/n");
+     seguir=sc.nextLine().charAt(0);
+     System.out.println("he contado " +contarLetras(cadena,letra)+ " con el caracter " +letra);
+      }while(seguir=='s');
+      if(seguir=='s'){
+      System.out.println("dime caracter");
+      letra=sc.nextLine().charAt(0);//solo me leera un unico caracter que yo de 
+      System.out.println("dime cadena ");
+      cadena=sc.nextLine();
+     System.out.println("he contado " +contarLetras(cadena,letra)+ " con el caracter " +letra);
+      }else{
+          System.out.println("fin");
+      }
+          
     }
     
     public static int contarLetras(String cadena,char letra){
